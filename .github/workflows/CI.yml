@@ -31,8 +31,8 @@ jobs:
       - name: Run tests on Windows
         if: runner.os == 'Windows'
         run:  |
-          echo "TMP=$env:USERPROFILE\AppData\Local\Temp" >> $env:GITHUB_ENV
-          echo "TEMP=$env:USERPROFILE\AppData\Local\Temp" >> $env:GITHUB_ENV
+          echo "TMP=$USERPROFILE\\AppData\\Local\\Temp" >> $GITHUB_ENV
+          echo "TEMP=$USERPROFILE\\AppData\\Local\\Temp" >> $GITHUB_ENV
           Set-DisplayResolution -Width 1920 -Height 1080 -Force; mvn clean verify
         shell: powershell
       - name: Run tests MacOS
