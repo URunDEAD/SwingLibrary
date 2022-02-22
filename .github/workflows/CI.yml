@@ -32,6 +32,7 @@ jobs:
         if: runner.os == 'Windows'
         run:  |
           echo "::set-env name=TMP::$env:USERPROFILE\AppData\Local\Temp"
+          echo "::set-env name=TEMP::$env:USERPROFILE\AppData\Local\Temp"
           Set-DisplayResolution -Width 1920 -Height 1080 -Force; mvn clean verify
         shell: powershell
       - name: Run tests MacOS
