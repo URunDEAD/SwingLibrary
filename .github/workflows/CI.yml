@@ -30,14 +30,7 @@ jobs:
           mvn clean verify
       - name: Run tests on Windows
         if: runner.os == 'Windows'
-        run:  |
-          echo "TMP=$USERPROFILE\\AppData\\Local\\Temp" >> $GITHUB_ENV
-          echo "TEMP=$USERPROFILE\\AppData\\Local\\Temp" >> $GITHUB_ENV
-          echo "TEM=$env:USERPROFILE\AppData\Local\Temp" >> $env:GITHUB_ENV
-          echo "TEMP=$env:USERPROFILE\AppData\Local\Temp" >> $env:GITHUB_ENV
-          echo "env:TEMP=$env:USERPROFILE\AppData\Local\Temp" >> $env:GITHUB_ENV
-          echo "env:TEMP=$env:USERPROFILE\AppData\Local\Temp" >> $env:GITHUB_ENV
-          Set-DisplayResolution -Width 1920 -Height 1080 -Force; mvn clean verify
+        run: Set-DisplayResolution -Width 1920 -Height 1080 -Force; mvn clean verify --variable fileToChoose:C:\Users\runneradmin\AppData\Local\Temp\test_file.txt
         shell: powershell
       - name: Run tests MacOS
         if: runner.os == 'macOS'
