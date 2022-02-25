@@ -5,10 +5,10 @@ Library         TestSwingLibrary
 
 *** Variables ***
 ${fileChooserButton}  openFileChooser
-${tempDir}  ${CURDIR}${/}test${/}tempdir
-${fileToChoose}  ${tempDir}${/}test_file.txt
-${anotherFile}  ${tempDir}${/}myFile.txt
-${defaultFile}  ${tempDir}${/}someFile.txt
+${temp_work_dir}  ${CURDIR}${/}test${/}tempdir
+${fileToChoose}  ${temp_work_dir}${/}test_file.txt
+${anotherFile}  ${temp_work_dir}${/}myFile.txt
+${defaultFile}  ${temp_work_dir}${/}someFile.txt
 
 *** Test Cases ***
 Choose From File Chooser Keyword Should Choose File From File Chooser
