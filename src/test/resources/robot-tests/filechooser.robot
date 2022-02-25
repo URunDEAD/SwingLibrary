@@ -33,6 +33,6 @@ Choose File In File Chooser Without Args
 
 *** Keywords ***
 createTestFileToTempDirectory
-    Create Directory  ${tempDir}
+    Create Directory  ${temp_work_dir}
     touch  ${fileToChoose}
 
