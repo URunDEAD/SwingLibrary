@@ -5,7 +5,7 @@ Library         TestSwingLibrary
 
 *** Variables ***
 ${fileChooserButton}  openFileChooser
-${temp_work_dir}  ${CURDIR}${/}test${/}tempdir
+${temp_work_dir}  ${CURDIR}${/}..${/}..${/}tempdir
 ${fileToChoose}  ${temp_work_dir}${/}test_file.txt
 ${anotherFile}  ${temp_work_dir}${/}myFile.txt
 ${defaultFile}  ${temp_work_dir}${/}someFile.txt
